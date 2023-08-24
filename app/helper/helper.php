@@ -36,7 +36,7 @@ if (!function_exists("asset")) {
      */
     function asset($path = null): string
     {
-        return dirname(__DIR__, 2);
+        return $_ENV["ASSET_URL"]."/$path";
     }
 }
 

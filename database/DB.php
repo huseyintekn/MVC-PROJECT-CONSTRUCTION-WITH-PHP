@@ -20,8 +20,13 @@ class DB
     public function __construct()
     {
         try {
+            $connection = $_ENV["DB_HOST"];
+            $port = $_ENV["DB_PORT"];
+            $db = $_ENV["DB_DATABASE"];
+            $root = $_ENV["DB_USERNAME"];
+            $password = $_ENV["DB_PASSWORD"];
 
-            $this->pdo = new PDO("mysql:host=127.0.0.1:8852; charset=utf8; dbname=gohub_backend_db", "gohub_backend_user", "gohub_backend_password");
+            $this->pdo = new PDO("mysql:host=$connection:$port; charset=utf8; dbname=$db", $root, $password);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 

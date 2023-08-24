@@ -93,10 +93,14 @@ class Route
 
             unset($parameters[0]);
 
+            $params = isset($parameters[1]) ? $parameters[1] : null;
+
             //print_r($parameters);die;
             if (is_callable($callback))
             {
-                echo call_user_func_array($callback,  [$request, $parameters[1]]);
+
+                echo call_user_func_array($callback,  [$request, $params]);
+
             }
 
             if (is_array($callback))
@@ -106,7 +110,7 @@ class Route
 
                 if (file_exists($controllerPath))
                 {
-                    echo call_user_func_array([new $callback[0],  $callback[1]], [$request, $parameters[1]]);
+                    echo call_user_func_array([new $callback[0],  $callback[1]], [$request, $params]);
                 }
             }
 
@@ -117,7 +121,7 @@ class Route
                 $controllerPath = __DIR__."/../".$filePath.".php";
                 if (file_exists($controllerPath))
                 {
-                    echo call_user_func_array([new $callback[0],  $callback[1]],  [$request, $parameters[1]]);
+                    echo call_user_func_array([new $callback[0],  $callback[1]],  [$request, $params]);
                 }
 
             }
