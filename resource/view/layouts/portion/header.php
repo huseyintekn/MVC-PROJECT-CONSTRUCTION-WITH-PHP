@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="<?php echo asset('assets/css/general.css')?>" type="text/css">
     <link rel="stylesheet" href="<?php echo asset('assets/css/modal.css') ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo asset('assets/css/tree.css') ?>" type="text/css">
+    <base href="<?php echo $_ENV["APP_URL"] ?>">
 
 </head>
 <body>

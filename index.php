@@ -10,13 +10,20 @@ use Routers\Route;
 use App\Http\Controllers\Books\BookController;
 use App\Http\Controllers\Employee\EmployeeController;
 use Dotenv\Dotenv;
+use App\Http\Controllers\User\UserController;
 
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 Route::get("/employee", [EmployeeController::class, "index"]);
-Route::get("/employee/{url}", [EmployeeController::class, "edit"]);
+Route::get("/employee/{id}", [EmployeeController::class, "edit"]);
 //Route::post("/employeee", [EmployeeController::class, "index"]);
+
+Route::get("/user", [UserController::class, "index"]);
+Route::get("/user/create", [UserController::class, "create"]);
+Route::post("/user/save", [UserController::class, "store"]);
+Route::get("/user/edit/{id}", [UserController::class, "edit"]);
+Route::post("/user/updaate/{id}", [UserController::class, "update"]);
 
 Route::get("/book", [BookController::class, "index"]);
 Route::get("/book/create", [BookController::class, "create"]);

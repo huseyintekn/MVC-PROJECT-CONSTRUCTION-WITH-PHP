@@ -29,6 +29,18 @@ if (!function_exists("view")) {
     }
 }
 
+
+if (!function_exists("resource")) {
+    /**
+     * @param $path
+     * @return void
+     */
+    function resource($path = null)
+    {
+        include dirname(__DIR__,2)."/resource/view/".$path;
+    }
+}
+
 if (!function_exists("asset")) {
     /**
      * @param $path
