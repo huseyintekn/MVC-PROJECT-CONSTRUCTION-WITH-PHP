@@ -15,9 +15,10 @@
 <!-- end::main-content -->
 </div>
 <!-- end::main -->
-<script src="<?php echo asset("assets/js/ht-app.js") ?>"></script>
+<script src="<?php echo asset("assets/js/jquery.js")?>"></script>
 <script src="<?php echo asset("assets/vendors/bundle/bundle.js") ?>"></script>
 <script src="<?php echo asset("assets/vendors/popper/popper.min.js")?>"></script>
+<script src="<?php echo asset("assets/js/ht-app.js") ?>"></script>
 <div class="colors"> <!-- To use theme colors with Javascript -->
     <div class="bg-primary"></div>
     <div class="bg-primary-bright"></div>

@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="<?php echo asset('assets/media/image/favicon.png')?>"/>
 
     <!-- Plugin styles -->
-    <link rel="stylesheet" href="<?php echo asset('assets/media/image/favicon.png')?>>" type="text/css"/>
+    <link rel="stylesheet" href="<?php echo asset('assets/media/image/favicon.png')?>" type="text/css"/>
     <!-- App styles -->
 
     <link rel="stylesheet" href="<?php echo asset("assets/css/ht-app.css")?>" type="text/css"/>
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="<?php echo asset('assets/css/general.css')?>" type="text/css">
     <link rel="stylesheet" href="<?php echo asset('assets/css/modal.css') ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo asset('assets/css/tree.css') ?>" type="text/css">
-    <base href="<?php echo $_ENV["APP_URL"] ?>">
+    <base href="<?php echo env("APP_URL", "hsyntkn") ?>">
 
 </head>
 <body>

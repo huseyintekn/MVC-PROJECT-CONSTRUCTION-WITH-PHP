@@ -76,3 +76,12 @@ if (!function_exists("old")) {
         return isset($_SESSION["old"][$key]) ? $_SESSION["old"][$key] : "";
     }
 }
+
+if (!function_exists("env")) {
+    function env($key, $default = null)
+    {
+        $env_key = $key == "" ? $default : $_ENV[$key];
+
+        return $env_key;
+    }
+}
