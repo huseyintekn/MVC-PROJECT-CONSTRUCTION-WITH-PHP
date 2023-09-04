@@ -199,7 +199,7 @@
                         </nav>
                     </div>
                     <div>
-                        <a class="btn btn-dark text-white" href=""> <i class="ti-back-left font-weight-bold mr-1"></i><span class="line">Geri Dön</span></a>
+                        <a class="btn btn-dark text-white" href="/user/create"> <i class="ti-back-left font-weight-bold mr-1"></i><span class="line">Geri Dön</span></a>
                         <button class="btn btn-primary" id="button-getForm" data-action="<?php echo "/user/create" ?>"><i class="fa fa-plus mr-1 text-white"></i><span class="line"> Ekle</span></button>
                     </div>
                 </div>
@@ -209,7 +209,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
+                        <?php include "filter.php" ?>
                         <div class="card">
+                            <?php include "card_header.php"?>
                             <div class="card-body p-2">
                                 <div class="row">
                                     <div class="col-md-12">
@@ -283,6 +285,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php include "card_footer.php"?>
                         </div>
                     </div>
                 </div>
